@@ -1,0 +1,14 @@
+name: 'crowdin'
+description: 'Upload/Download crowdin translations'
+inputs:
+  crowdin_project_key:
+    description: Your crowdin project apikey
+    required: true
+  crowdin_action:
+    description: upload/download
+    required: true
+runs:
+  using: docker
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.crowdin_action }}
