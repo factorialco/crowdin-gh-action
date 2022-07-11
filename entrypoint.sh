@@ -1,3 +1,5 @@
 #!/bin/sh
 
-crowdin -c crowdin.yml $1
+pushd $INPUT_WORKING_DIRECTORY
+  crowdin -c crowdin.yml $INPUT_CROWDIN_ACTION
+popd

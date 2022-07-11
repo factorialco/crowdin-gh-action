@@ -1,11 +1,13 @@
 name: 'crowdin'
 description: 'Upload/Download crowdin translations'
 inputs:
-  crowdin_action:
-    description: upload/download
+  working-directory:
+    description: Optional working-directory folder where the command is executed
+    default: '.'
+    required: false
+  crowdin-action:
+    description: Crowdin action to be executed [upload, download]
     required: true
 runs:
   using: docker
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.crowdin_action }}

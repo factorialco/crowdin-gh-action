@@ -4,22 +4,26 @@ Github action for crowdin upload-download actions
 
 ## Inputs
 
-### `crowdin_action`
+### `working-directory`
+
+**Optional** The folder where you want to perform the action (Default: `.`)
+
+### `crowdin-action`
 
 **Required** The action you want to perform, `upload` or `download`
 
 ## Example usage
 
     - name: crowdin upload
-      uses: factorialco/crowdin-gh-action@latest
+      uses: factorialco/crowdin-gh-action@v1
       with:
-        crowdin_action: upload
+        crowdin-action: upload
       env:
-        CROWDIN_PROJECT_KEY: ${{ secrets.crowdin_project_key }}
+        CROWDIN_PROJECT_KEY: ${{ secrets.CROWDIN_PROJECT_KEY }}
 
     - name: crowdin download
-      uses: factorialco/crowdin-gh-action@latest
+      uses: factorialco/crowdin-gh-action@v1
       with:
-        crowdin_action: download
+        crowdin-action: download
       env:
-        CROWDIN_PROJECT_KEY: ${{ secrets.crowdin_project_key }}
+        CROWDIN_PROJECT_KEY: ${{ secrets.CROWDIN_PROJECT_KEY }}
