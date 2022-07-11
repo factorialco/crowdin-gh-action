@@ -8,6 +8,10 @@ inputs:
   crowdin-action:
     description: Crowdin action to be executed [upload, download]
     required: true
+  dry-run:
+    description: Run Crowdin action in dry-run mode [true, false]
+    default: 'false'
+    required: false
 runs:
   using: docker
   image: 'Dockerfile'

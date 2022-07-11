@@ -12,6 +12,11 @@ Github action for crowdin upload-download actions
 
 **Required** The action you want to perform, `upload` or `download`
 
+### `dry-run`
+
+**Optional** Decide if you want to execute the action in dry-run mode, `false`
+or `true` (Default: `false`)
+
 ## Example usage
 
     - name: crowdin upload
